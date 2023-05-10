@@ -66,8 +66,9 @@ def sendTGday(day, to):
 user_agent = input("UserAgent: ")
 
 # Make a request to the NationStates API using the user-agent
+region=input("What region do you want to run this for?")
 response = requests.get(
-  "https://www.nationstates.net/cgi-bin/api.cgi?region=the_wellspring",
+  f"https://www.nationstates.net/cgi-bin/api.cgi?region={region.lower.()strip()}",
   headers={"User-Agent": user_agent},
 )
 
