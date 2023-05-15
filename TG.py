@@ -25,9 +25,9 @@ def sendTG(to, client, tgid, key):
   #print(url1, headers1, data1)
   print("sleeping for 30 secounds to be extra safe")
   #must be atleast 30!!!
-  for i in tqdm(range(30)):
-    count=count+1
-    sleep(1)
+  #for i in tqdm(range(30)):
+  #  count=count+1
+    sleep(30)
 
 
 #client,tgid,key
@@ -66,7 +66,7 @@ def sendTGday(day, to):
 user_agent = input("UserAgent: ")
 
 # Make a request to the NationStates API using the user-agent
-region=input("What region do you want to run this for?")
+region="the north pacific"
 response = requests.get(
   f"https://www.nationstates.net/cgi-bin/api.cgi?region={region.lower.()strip()}",
   headers={"User-Agent": user_agent},
@@ -123,6 +123,4 @@ with open("output.csv", "w") as csvfile:
 
 csvfile.close()
 print("Done making Database time to send TGs")
-global count
-print(count)
 print("Sent TGS")
